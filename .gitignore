@@ -1,5 +1,5 @@
-AluraStickers/.vscode
-AluraStickers/bin
-AluraStickers/lib
-AluraStickers/entrada
-AluraStickers/saida/*.png
+.vscode
+bin
+lib
+entrada
+saida/*.png
