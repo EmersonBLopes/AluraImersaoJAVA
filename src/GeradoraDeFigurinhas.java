@@ -15,7 +15,7 @@ public class GeradoraDeFigurinhas {
 
         //leitura da imagem
         //InputStream FluxoDeEntrada = new URL("https://imersao-java-apis.s3.amazonaws.com/TopMovies_4.jpg").openStream();
-        //BufferedImage ImagemOriginal = ImageIO.read(FluxoDeEntrada);
+        BufferedImage ImagemOriginal = ImageIO.read(FluxoDeEntrada);
 
         //Criar nova imagem em memória com tranparência e redimensionada    
         int largura = ImagemOriginal.getWidth();
