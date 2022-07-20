@@ -1,5 +1,5 @@
-.vscode
-bin
-lib
-entrada
-saida/*.png
+/.vscode
+/bin
+/lib
+/entrada
+/saida/*.png
