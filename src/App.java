@@ -11,7 +11,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         float stars;
         // fazer uma conexão HTTP e buscar os top 250 filmes
-        String url = "https://alura-filmes.herokuapp.com/conteudos";//end point
+        String url = "https://api.mocki.io/v2/549a5d8b";//end point
         URI endereco = URI.create(url); //criação da uri
         HttpClient client = HttpClient.newHttpClient();//Criação do cliente http 
         HttpRequest request = HttpRequest.newBuilder(endereco).GET().build();//Criarção  da requisição HTTP
