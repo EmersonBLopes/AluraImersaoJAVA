@@ -3,15 +3,12 @@ import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStream;
 import javax.imageio.ImageIO;
 
 
 public class GeradoraDeFigurinhas {
-    public void cria(InputStream FluxoDeEntrada, String NomeArquivo) throws IOException{
-
-        String DirSaida="saida/";
+    public void cria(InputStream FluxoDeEntrada, String NomeArquivo) throws Exception{
 
         //leitura da imagem
         //InputStream FluxoDeEntrada = new URL("https://imersao-java-apis.s3.amazonaws.com/TopMovies_4.jpg").openStream();
@@ -37,11 +34,11 @@ public class GeradoraDeFigurinhas {
         Graphics.drawString("TOPZERA", NovaImagem.getWidth()/2 , novaAltura-100);
 
         //escrever a nova imagem em um arquivo
-        DirSaida.concat(NomeArquivo);
-        ImageIO.write(NovaImagem, "png", new File(DirSaida));
+        //DirSaida = DirSaida + NomeArquivo;
+        ImageIO.write(NovaImagem, "png", new File("../saida/"+NomeArquivo));
     }
-    public static void main(String[] args) throws IOException{
-        GeradoraDeFigurinhas Geradora = new GeradoraDeFigurinhas();
-        Geradora.cria();
-    }
+    //public static void main(String[] args) throws IOException{
+      //  GeradoraDeFigurinhas Geradora = new GeradoraDeFigurinhas();
+        //Geradora.cria();
+//    }
 }

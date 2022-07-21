@@ -5,13 +5,14 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.util.List;
 import java.util.Map;
+import java.io.InputStream;
+import java.net.URL;
 
 public class App {
 
     public static void main(String[] args) throws Exception {
-        float stars;
         // fazer uma conexão HTTP e buscar os top 250 filmes
-        String url = "https://api.mocki.io/v2/549a5d8b";//end point
+        String url = "https://mocki.io/v1/9a7c1ca9-29b4-4eb3-8306-1adb9d159060";//end point
         URI endereco = URI.create(url); //criação da uri
         HttpClient client = HttpClient.newHttpClient();//Criação do cliente http 
         HttpRequest request = HttpRequest.newBuilder(endereco).GET().build();//Criarção  da requisição HTTP
@@ -23,17 +24,20 @@ public class App {
         List<Map<String, String>> listaDeFilmes = parser.parse(body);//passa a string body para ser parseado através do método parse
 
         // exibir e manipular os dados 
+        GeradoraDeFigurinhas Geradora = new GeradoraDeFigurinhas();
         for (Map<String,String> filme : listaDeFilmes) { // exibi atributo/valor de cada item da lista de filmes 
-            System.out.println("\u001b[1m\u001b[41m"+filme.get("title")+"\u001b[m");
-            System.out.println("Link do poster: "+"\u001b[34m"+filme.get("image")+"\u001b[m");
-            System.out.println("Classificação: "+filme.get("imDbRating"));
-            stars = Float.parseFloat(filme.get("imDbRating"));
-            for(int I=1; I<=Math.round(stars); I++){//cria um emoji de estrela para cada volta do loop completa
-                System.out.print('\u2B50');
-                if(I==Math.round(stars)){//caso I seja igual a stars retorna uma quebra de linha
-                    System.out.println();
-                }
+            
+            String UrlImagem = filme.get("image");
+            String Titulo = filme.get("title");
+
+            InputStream FluxodeEntrada = new URL(UrlImagem).openStream();
+            String NomeArquivo = Titulo + ".png";
+            NomeArquivo.replaceAll("[:]","_");
+
+            Geradora.cria(FluxodeEntrada,NomeArquivo);
+
+            System.out.println(Titulo);
+            System.out.println();
             }
         }
     }
-}
