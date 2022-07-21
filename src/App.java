@@ -31,9 +31,7 @@ public class App {
             String Titulo = filme.get("title");
 
             InputStream FluxodeEntrada = new URL(UrlImagem).openStream();
-            String NomeArquivo = Titulo + ".png";
-            NomeArquivo.replaceAll("[:]","_");
-
+            String NomeArquivo = Titulo.replace(":", "-")+".png";
             Geradora.cria(FluxodeEntrada,NomeArquivo);
 
             System.out.println(Titulo);
