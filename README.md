@@ -8,8 +8,8 @@
 
  ## Instruções:
 - ###### Para clonar o repositório basta digitar o comando <code>git clone https://github.com/EmersonBLopes/AluraImersaoJAVA.git</code> no seu terminal com o git instalado
-- ###### Cada desafio está documentado dentro de uma branch do repositório.
-- ###### Para acessá-las basta digitar o comando <code>git checkout Desafio"Numero do desafio"</code>.
+- ###### Cada desafio está documentado dentro de um branch do repositório.
+- ###### Para acessá-las basta digitar o comando <code>git checkout Desafio"numero_do_desafio"</code>.
 
 <h2> :warning: Primerio desafio</h2>
 
