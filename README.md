@@ -1,6 +1,6 @@
 <img src="/readme/logo.png" alt="Logo da imersão java"/>
 
-![](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge) [![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emersonbasiliolopes/)
+![](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)&nbsp;&nbsp;[![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emersonbasiliolopes/)
  
  ## Introdução
 - ###### Repositório que contém todos os projetos e desafios propostos durante a Imersão  Java.
