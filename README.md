@@ -1,6 +1,6 @@
 <img src="/readme/logo.png" alt="Logo da imersão java"/>
 
- <h1>Imersão Java</h1> 
+ <h1 style="display:flex; justify-content:space-between">Imersão Java<a href="https://www.linkedin.com/in/emersonbasiliolopes/"><img style="float:right; width:40px" src="/readme/linkedin.svg"/></h1> </a>
  <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 
  ## Introdução
