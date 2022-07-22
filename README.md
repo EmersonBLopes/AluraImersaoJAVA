@@ -31,3 +31,11 @@
   - [ ] Tratar as imagens retornadas pela API do IMDB para pegar uma imagem maior ao invés dos thumbnails. Opções: pegar a URL da imagem e remover o trecho mostrado durante a aula ou consumir o endpoint de posters da API do IMDB (mais trabalhoso), tratando o JSON retornado.
   - [ ] Fazer com que o texto da figurinha seja personalizado de acordo com as classificações do IMDB.
   - [ ] Desafio supremo: usar alguma biblioteca de manipulação de imagens como OpenCV pra extrair imagem principal e contorná-la.
+
+  <h2> :warning: Terceiro desafio</h2>
+
+  - [ ] Transformar a classe que representa os conteúdos em um Record, disponível a partir do Java 16.
+  - [ ] Criar as suas próprias exceções e usá-las na classe que implementa o cliente HTTP.
+  - [ ] Usar recursos do Java 8 e posterior, como Streams e Lambdas, para mapear uma lista em uma outra.
+  - [ ] Criar uma Enum que une, como configurações, a URL da API e o extrator utilizado.
+  - [ ] Desafio supremo: consumir outras APIs que contém imagens, como a da Marvel, que é bem diferente. Repositório com APIs públicas: [clique aqui.](https://github.com/public-apis/public-apis)

@@ -1,6 +1,6 @@
 import java.io.InputStream;
 import java.net.URL;
-import java.util.Map;
+import java.util.List;
 
 public class App {
 
@@ -10,22 +10,24 @@ public class App {
         ClienteHttp http = new ClienteHttp();
         String Json = http.buscaDados(Url);
 
-        // extrair só os dados que interessam (titulo, poster, classificação)
-        JsonParser parser = new JsonParser();//Instância o objeto parse na classe JsonParser
-        <List<Map<String, String>> listaDeConteudos = parser.parse(Json);//passa a string body para ser parseado através do método parse
+        
 
         // exibir e manipular os dados 
+        ExtratorDeConteudo Extrator = new ExtratorDeConteudoDaNasa();
+        List<Conteudo> Conteudos = Extrator.extraiConteudos(Json);
+
         GeradoraDeFigurinhas Geradora = new GeradoraDeFigurinhas();
 
-        for (int i = 0; i<=19; i++) { // exibi atributo/valor de cada item da lista de filmes         
+        // exibi atributo/valor de cada item da lista de filmes   
+        for(int i = 0; i<=9; i++) {       
 
-            Map<String,String> conteudo = listaDeConteudos;
+            Conteudo conteudo = Conteudos.get(i);
 
-            InputStream FluxodeEntrada = new URL(conteudo.UrlImagem).openStream();
-            String NomeArquivo = Titulo + ".png";
+            InputStream FluxodeEntrada = new URL(conteudo.getUrlImagem()).openStream();
+            String NomeArquivo = conteudo.getTitulo() + ".png";
 
             Geradora.cria(FluxodeEntrada,NomeArquivo);
-            System.out.println(Titulo);
+            System.out.println(conteudo.getTitulo());
             System.out.println();
             }
         }
