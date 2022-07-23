@@ -8,18 +8,14 @@ public class App {
         String Url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=10";
 
         ClienteHttp http = new ClienteHttp();
-        String Json = http.buscaDados(Url);
-
-        
-
+        String Json = http.buscaDados(Url);        
         // exibir e manipular os dados 
         ExtratorDeConteudo Extrator = new ExtratorDeConteudoDaNasa();
         List<Conteudo> Conteudos = Extrator.extraiConteudos(Json);
-
         GeradoraDeFigurinhas Geradora = new GeradoraDeFigurinhas();
 
         // exibi atributo/valor de cada item da lista de filmes   
-        for(int i = 0; i<=9; i++) {       
+        for(int i = 0; i<=Conteudos.size()-1; i++) {       
 
             Conteudo conteudo = Conteudos.get(i);
 

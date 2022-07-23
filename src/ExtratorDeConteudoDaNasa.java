@@ -14,7 +14,7 @@ public class ExtratorDeConteudoDaNasa implements ExtratorDeConteudo {
 
         //Popular a lista
         for(Map<String,String> atributos : ListaDeAtributos){
-            String Titulo = atributos.get("title");
+            String Titulo = atributos.get("title").replace(":", "-")  + ".png";;
             String UrlImagem = atributos.get("url");
             Conteudo conteudo = new Conteudo(Titulo,UrlImagem);
 
