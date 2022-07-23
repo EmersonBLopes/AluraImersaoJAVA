@@ -5,12 +5,12 @@ import java.util.List;
 public class App {
 
     public static void main(String[] args) throws Exception {
-        String Url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&count=10";
+        String Url = "http://localhost:8080/linguagens";
 
         ClienteHttp http = new ClienteHttp();
         String Json = http.buscaDados(Url);        
         // exibir e manipular os dados 
-        ExtratorDeConteudo Extrator = new ExtratorDeConteudoDaNasa();
+        ExtratorDeConteudo Extrator = new ExtratorDeConteudoDoIMDB();
         List<Conteudo> Conteudos = Extrator.extraiConteudos(Json);
         GeradoraDeFigurinhas Geradora = new GeradoraDeFigurinhas();
 

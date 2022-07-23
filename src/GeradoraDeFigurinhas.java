@@ -25,20 +25,17 @@ public class GeradoraDeFigurinhas {
         Graphics.drawImage(ImagemOriginal, 0, 0, null);
 
         //Setar a fonte
-            Font Fonte = new Font(Font.SANS_SERIF, Font.BOLD,128);
+            Font Fonte = new Font(Font.SANS_SERIF, Font.BOLD,largura/6);
             Graphics.setFont(Fonte);
             Graphics.setColor(Color.RED);
 
         //inserir um texto na nova imagem
 
-        Graphics.drawString("TOPZERA", NovaImagem.getWidth()/2 , novaAltura-100);
+        Graphics.drawString("TOPZERA", 0, Math.round(novaAltura-novaAltura*0.04));
+        System.out.println((largura/6-largura)/2*-1);
 
         //escrever a nova imagem em um arquivo
         //DirSaida = DirSaida + NomeArquivo;
         ImageIO.write(NovaImagem, "png", new File("../saida/"+NomeArquivo));
     }
-    //public static void main(String[] args) throws IOException{
-      //  GeradoraDeFigurinhas Geradora = new GeradoraDeFigurinhas();
-        //Geradora.cria();
-//    }
 }
